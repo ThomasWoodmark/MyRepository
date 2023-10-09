@@ -1,7 +1,18 @@
+"""
+:modulename: test.py
+:moduleauthor: Thomas
+
+This notebook is only a test
+
+=======
+"""
+
 print("hello world")
 
-x = 4
+testvariable = 4
 
-print(x)
+testvariable = testvariable + 2
 
-#test
+print(testvariable)
+
+# test123
