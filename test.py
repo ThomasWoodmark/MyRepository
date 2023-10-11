@@ -7,14 +7,12 @@ This notebook is only a test
 =======
 """
 
-print("hello world")5
+print("hello world")
 
 TEST_CONST = 4
 
-test_v = int(input("Bitte gebe eine Zahl ein "))
+test_v = int(input("Bitte eingabe"))
 
-test_v_2 = test_v + TEST_CONST
-
-print(test_v_2)
+print(tes_v)
 
 # test123
