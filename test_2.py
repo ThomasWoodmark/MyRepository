@@ -11,8 +11,8 @@ print("hello world")
 
 TEST_CONST = 42
 
-test_v = input("Bitte Eingabe ")
+test_va = input("Bitte Eingabe ")
 
-print(test_v + test_v)
+print(test_va + test_va)
 
 # test123
