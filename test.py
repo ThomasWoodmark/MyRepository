@@ -11,7 +11,7 @@ print("hello world")
 
 TEST_CONST = 42
 
-test_v = input("Bitte Eingabe ")
+test_vx = input("Bitte Eingabe ")
 
 print(test_v + test_v)
 
