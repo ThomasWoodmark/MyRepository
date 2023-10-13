@@ -13,6 +13,6 @@ TEST_CONST = 423
 
 test_y = input("Bitte Eingabe ")
 
-print(test_sy + test_y)
+print(test_y + test_y)
 
 # test123
