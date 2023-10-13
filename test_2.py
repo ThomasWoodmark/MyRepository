@@ -9,7 +9,7 @@ This notebook is only a test
 
 print("hello world")
 
-TEST_CONST = 42
+TEST_CONST = 432
 
 test_va = input("Bitte Eingabe ")
 
