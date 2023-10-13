@@ -42,3 +42,4 @@ repos:
   #           "--load-plugins=pylint.extensions.docparams", # Load an extension
   #           "--fail-under=8"
   #         ]
+  #       pass: true
