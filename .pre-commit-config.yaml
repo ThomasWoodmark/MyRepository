@@ -37,8 +37,8 @@ repos:
         types: [python]
         args:
           [
-            "-rn", # Only display messages
-            "--rcfile=.pylintrc", # Link to your config file
-            "--load-plugins=pylint.extensions.docparams", # Load an extension
-            "--fail-under=8"
+            "-rn",
+            "--rcfile=.pylintrc",
+            "--load-plugins=pylint.extensions.docparams",
+            # "--fail-under=8"
           ]
