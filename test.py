@@ -11,7 +11,9 @@ print("hello world")
 
 TEST_CONST = 4235555
 
-test_y4 = input("Bitte Eingabe ")
+test_y = input("Bitte Eingabe ")
+
+test_y = 5
 
 print(test_y + test_y)
 
