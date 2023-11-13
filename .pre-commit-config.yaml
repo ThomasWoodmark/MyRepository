@@ -2,43 +2,58 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: check-yaml
-      - id: check-json
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: mixed-line-ending
-      - id: check-added-large-files
-      - id: requirements-txt-fixer
+      - id: check-yaml # Checks the validity of YAML files.
+      - id: check-json # Checks the validity of JSON files.
+      - id: end-of-file-fixer # Ensures that files end with a newline character.
+      - id: trailing-whitespace # Identifies and removes trailing whitespace in files.
+      - id: mixed-line-ending # Checks for mixed line endings and fixes them.
+      - id: check-added-large-files # Prevents large files from being added to the repository.
+      - id: requirements-txt-fixer # Corrects formatting issues in Python requirements.txt files.
+      - id: check-case-conflict # Detects case conflicts in filenames.
+      - id: check-executables-have-shebangs # Ensures that executable scripts have a shebang line.
+      - id: check-merge-conflict # Detects and prevents Git merge conflicts in files.
+      - id: check-symlinks # Checks the validity of symbolic links.
+      - id: check-vcs-permalinks # Ensures that VCS (Version Control System) permalinks are correctly configured.
+      - id: destroyed-symlinks # Detects and removes broken symbolic links.
+      - id: detect-private-key # Scans for the presence of private keys in the repository.
+      - id: fix-byte-order-marker # Fixes byte order markers in text files.
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.32.0
+    hooks:
+      - id: yamllint # Uses yamllint to check the formatting and style of YAML files.
+        args: [--strict, --config-file, .yamllint]
+        exclude: \.github/workflows/.*
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.8.0
     hooks:
-      - id: pyupgrade
+      - id: pyupgrade # Upgrades Python 2 code to Python 3-compatible syntax using the pyupgrade tool.
         args: [ --py3-plus ]
 
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
-      - id: isort
-        args: [ "--profile", "black" ]
+      - id: isort # Formats and sorts Python imports according to the Black code style.
+        args: ["--profile", "black"]
 
   - repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
-      - id: black
+      - id: black # Formats Python code using the black code formatter with a maximum line length of 120 characters.
         args: [ --line-length=120 ]
 
   - repo: local
     hooks:
-      - id: pylint
+      - id: pylint # Runs the Pylint code analysis tool on Python code with specific arguments:
         name: pylint
         entry: pylint
         language: system
         types: [python]
         args:
           [
-            "-rn",
-            "--rcfile=.pylintrc",
-            "--load-plugins=pylint.extensions.docparams",
-            # "--fail-under=8"
+            "-rn", # Only display messages
+            "--rcfile=.pylintrc", # Link to your config file
+            "--load-plugins=pylint.extensions.docparams", # Load an extension
+            "--fail-under=8"
           ]

@@ -1,4 +1,5 @@
 [FORMAT]
+
 max-line-length=120
 
 # Maximum number of lines in a module
@@ -20,4 +21,9 @@ docstring-min-length=10
 
 # List of additional names supposed to be defined in builtins. Remember that
 # you should avoid to define new builtins when possible.
-additional-builtins=display,dbutils,spark
+additional-builtins=display,dbutils,spark,getArgument
+
+[MASTER]
+
+# This section is essential to ensure that Pylint's checking discovers custom functions.
+init-hook='import sys; sys.path.append(".")'
