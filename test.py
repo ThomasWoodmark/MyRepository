@@ -15,9 +15,6 @@ test_y = input("Bitte Eingabe ")
 
 test_y = 5
 
-print(test_x + test_y)
+print(test_y + test_y)
 
 # test123
-
-
-
